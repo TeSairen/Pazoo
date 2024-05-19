@@ -1,0 +1,307 @@
+@media screen and (min-aspect-ratio: 1/1) {
+  #main-grid {
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+  #main-grid::after {
+    background-size: calc(100vw / 16) calc(100vh / 9);
+  }
+
+  /* Main Area */
+
+  .main-area {
+    grid-area: 4 / 6 / 7 / 12;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Other website elements */
+
+  #twitter-btn {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  #twitter-btn svg {
+    margin-right: 8px;
+    height: 12px;
+    width: auto;
+  }
+
+  #guide-dropdown,
+  #resources-btn {
+    display: none;
+  }
+
+  #logo-mobile {
+    display: none;
+  }
+
+  #logo-mobile img {
+    display: none;
+  }
+
+  /* Positioning of the nodes */
+
+  /* First Column Sparse */
+
+  #divNode1 {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  #divNode2 {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+
+  #divNode3 {
+    grid-area: 6 / 1 / 8 / 3;
+  }
+
+  #divNode4 {
+    grid-area: 8 / 1 / 10 / 3;
+  }
+
+  /* Second Column Compact */
+
+  #divNode5 {
+    grid-area: 2 / 2 / 4 / 4;
+  }
+
+  #divNode6 {
+    grid-area: 4 / 2 / 6 / 4;
+  }
+
+  #divNode7 {
+    grid-area: 5 / 2 / 7 / 4;
+  }
+
+  #divNode8 {
+    grid-area: 7 / 2 / 9 / 4;
+  }
+
+  /* Third Column Sparse */
+
+  #divNode9 {
+    grid-area: 1 / 3 / 3 / 5;
+  }
+
+  #divNode10 {
+    grid-area: 3 / 3 / 5 / 5;
+  }
+
+  #divNode11 {
+    grid-area: 6 / 3 / 8 / 5;
+  }
+
+  #divNode12 {
+    grid-area: 8 / 3 / 10 / 5;
+  }
+
+  /* Fourth Column Compact */
+
+  #divNode13 {
+    grid-area: 2 / 4 / 4 / 6;
+  }
+
+  #divNode14 {
+    grid-area: 4 / 4 / 6 / 6;
+  }
+
+  #divNode15 {
+    grid-area: 5 / 4 / 7 / 6;
+  }
+
+  #divNode16 {
+    grid-area: 7 / 4 / 9 / 6;
+  }
+
+  /* Fifth Column Compact */
+
+  #divNode17 {
+    grid-area: 2 / 5 / 4 / 7;
+  }
+
+  #divNode18 {
+    grid-area: 4 / 5 / 6 / 7;
+  }
+
+  #divNode19 {
+    grid-area: 5 / 5 / 7 / 7;
+  }
+
+  #divNode20 {
+    grid-area: 7 / 5 / 9 / 7;
+  }
+
+  /* Sixth Column Sparse */
+
+  #divNode21 {
+    grid-area: 1 / 6 / 3 / 8;
+  }
+
+  #divNode22 {
+    grid-area: 3 / 6 / 5 / 8;
+  }
+
+  #divNode23 {
+    grid-area: 6 / 6 / 8 / 8;
+  }
+
+  #divNode24 {
+    grid-area: 8 / 6 / 10 / 8;
+  }
+
+  /* Seventh Column Sparse */
+
+  #divNode25 {
+    grid-area: 1 / 7 / 3 / 9;
+  }
+
+  #divNode26 {
+    grid-area: 3 / 7 / 5 / 9;
+  }
+
+  #divNode27 {
+    grid-area: 6 / 7 / 8 / 9;
+  }
+
+  #divNode28 {
+    grid-area: 8 / 7 / 10 / 9;
+  }
+
+  /* Eighth Column Center */
+
+  #divNode29 {
+    grid-area: 2 / 8 / 4 / 10;
+  }
+
+  #divNode30 {
+    grid-area: 7 / 8 / 9 / 10;
+  }
+
+  /* Ninth Column Sparse */
+
+  #divNode31 {
+    grid-area: 1 / 9 / 3 / 11;
+  }
+
+  #divNode32 {
+    grid-area: 3 / 9 / 5 / 11;
+  }
+
+  #divNode33 {
+    grid-area: 6 / 9 / 8 / 11;
+  }
+
+  #divNode34 {
+    grid-area: 8 / 9 / 10 / 11;
+  }
+
+  /* Tenth Column Sparse */
+
+  #divNode35 {
+    grid-area: 1 / 10 / 3 / 12;
+  }
+
+  #divNode36 {
+    grid-area: 3 / 10 / 5 / 12;
+  }
+
+  #divNode37 {
+    grid-area: 6 / 10 / 8 / 12;
+  }
+
+  #divNode38 {
+    grid-area: 8 / 10 / 10 / 12;
+  }
+
+  /* Eleventh Column Compact */
+
+  #divNode39 {
+    grid-area: 2 / 11 / 4 / 13;
+  }
+
+  #divNode40 {
+    grid-area: 4 / 11 / 6 / 13;
+  }
+
+  #divNode41 {
+    grid-area: 5 / 11 / 7 / 13;
+  }
+
+  #divNode42 {
+    grid-area: 7 / 11 / 9 / 13;
+  }
+
+  /* Twelfth Column Compact */
+
+  #divNode43 {
+    grid-area: 2 / 12 / 4 / 14;
+  }
+
+  #divNode44 {
+    grid-area: 4 / 12 / 6 / 14;
+  }
+
+  #divNode45 {
+    grid-area: 5 / 12 / 7 / 14;
+  }
+
+  #divNode46 {
+    grid-area: 7 / 12 / 9 / 14;
+  }
+
+  /* Thirteenth Column Sparse */
+
+  #divNode47 {
+    grid-area: 1 / 13 / 3 / 15;
+  }
+
+  #divNode48 {
+    grid-area: 3 / 13 / 5 / 15;
+  }
+
+  #divNode49 {
+    grid-area: 6 / 13 / 8 / 15;
+  }
+
+  #divNode50 {
+    grid-area: 8 / 13 / 10 / 15;
+  }
+
+  /* Fourteenth Column Compact */
+
+  #divNode51 {
+    grid-area: 2 / 14 / 4 / 16;
+  }
+
+  #divNode52 {
+    grid-area: 4 / 14 / 6 / 16;
+  }
+
+  #divNode53 {
+    grid-area: 5 / 14 / 7 / 16;
+  }
+
+  #divNode54 {
+    grid-area: 7 / 14 / 9 / 16;
+  }
+
+  /* Fifteenth Column Sparse */
+
+  #divNode55 {
+    grid-area: 1 / 15 / 3 / 17;
+  }
+
+  #divNode56 {
+    grid-area: 3 / 15 / 5 / 17;
+  }
+
+  #divNode57 {
+    grid-area: 6 / 15 / 8 / 17;
+  }
+
+  #divNode58 {
+    grid-area: 8 / 15 / 10 / 17;
+  }
+}

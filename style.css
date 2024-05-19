@@ -1,0 +1,380 @@
+:root {
+  --dark-gray: rgb(75 85 99);
+  --medium-gray: rgb(107 114 128);
+  --light-gray: rgb(209 213 219);
+  --white-gray: rgb(249 250 251);
+  --active-green: rgb(22 163 74);
+  --active-yellow: rgb(251 191 36);
+  --red-issue: rgb(220 38 38);
+  --background-green: rgb(240 253 244);
+  --hover-gray: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: clamp(12px, 1vw, 24px);
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh; /* for mobile browsers */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 5;
+}
+
+#menu {
+  padding: 4px 8px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+#menu a:is(:link, :visited, :hover, :focus, :active) {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+#menu svg {
+  margin-left: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 16px;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-btn:hover {
+  background-color: var(--hover-gray);
+}
+
+#logo-div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+}
+
+#logo-div img {
+  height: 20px;
+  width: auto;
+  user-select: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  background-color: var(--white-gray);
+  border: solid 1px var(--light-gray);
+  border-radius: 8px;
+  top: 100%;
+}
+
+.dropdown li {
+  padding: 8px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+  user-select: none;
+}
+
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+.dropdown li:hover {
+  background-color: var(--hover-gray);
+}
+
+.dropdown a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown a img {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+  user-select: none;
+}
+
+/* Main */
+
+#main-grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  user-select: none;
+}
+
+#main-svg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  z-index: 1;
+  user-select: none;
+}
+
+#main-grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-grid > div > svg {
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+}
+
+.nodeDiv {
+  width: 7vmin;
+  height: 7vmin;
+  z-index: 1;
+  border-radius: 100%;
+  border: solid 1px var(--light-gray);
+  background-color: var(--white-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nodeDiv > svg {
+  height: 70%;
+  width: 70%;
+  z-index: 1;
+  user-select: none;
+}
+
+.nodeDiv:hover {
+  cursor: pointer;
+}
+
+.circle-svg:hover {
+  cursor: pointer;
+}
+
+#text-container {
+  box-sizing: border-box;
+  width: 70%;
+  height: 40px;
+  background-color: var(--white-gray);
+  border-radius: 8px;
+  border: solid 1px var(--light-gray);
+  font-size: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 10px;
+  user-select: none;
+}
+
+#password {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  min-width: 0;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+#password:focus {
+  outline: none;
+}
+
+#btn-copy {
+  cursor: pointer;
+  margin-right: 5px;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.animate {
+  animation: moveDownAndUp 0.3s ease-in-out forwards;
+}
+
+#btn-copy:hover {
+  background-color: var(--hover-gray);
+}
+
+#btn-copy > img {
+  height: 60%;
+  width: auto;
+  max-width: 60%;
+  display: block;
+  user-select: none;
+}
+
+#btn-copy > svg {
+  height: 60%;
+  width: auto;
+  max-width: 60%;
+  display: none;
+  user-select: none;
+}
+
+@keyframes moveDownAndUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+.shake-animation {
+  animation: redEmptyInputShake 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes redEmptyInputShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  12.5%,
+  62.5% {
+    transform: translateX(-3px);
+  }
+  37.5%,
+  87.5% {
+    transform: translateX(3px);
+  }
+}
+
+.inactive-node {
+  width: 7vmin;
+  height: 7vmin;
+  border: solid 1px var(--light-gray);
+}
+
+.inactive-node > svg > path {
+  fill: var(--medium-gray);
+}
+
+.hover-node {
+  width: 8vmin;
+  height: 8vmin;
+  border: solid 1px var(--medium-gray);
+}
+
+.hover-node > svg > path {
+  fill: var(--medium-gray);
+}
+
+.active-node {
+  width: 8vmin;
+  height: 8vmin;
+  border: solid 1px var(--dark-gray);
+}
+
+.active-node > svg > path {
+  fill: var(--dark-gray);
+}
+
+.yellow-node {
+  width: 8vmin;
+  height: 8vmin;
+  border: solid 1px var(--active-yellow);
+  background-color: var(--active-yellow);
+}
+
+.yellow-node > svg > path {
+  fill: white;
+}
+
+.green-node {
+  width: 8vmin;
+  height: 8vmin;
+  border: solid 1px var(--active-green);
+  background-color: var(--active-green);
+}
+
+.green-node > svg > path {
+  fill: white;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 4;
+}
+
+#twitter-btn {
+  background-color: #000;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  font-size: 0.8rem;
+  z-index: 5;
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+#twitter-btn:hover {
+  background-color: var(--dark-gray);
+}
